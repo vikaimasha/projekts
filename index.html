@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Planner</title>
+  <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>Smart Planner</h1>
+    <p>Pārvaldiet savu laiku saprātīgi. Strukturē plānošanu bez pārslodzes un ar stilu.</p>
+    <a href="#pricing" class="btn">Sākt</a>
+</header>
+
+<section id="pricing">
+    <h2 class="section-title">Pakešu izvēle</h2>
+    <div class="pricing">
+        <div class="card">
+            <h3>Week</h3>
+            <div class="price">3€</div>
+            <p>Ideāli īstermiņa plānošanai un fokusa noturēšanai.</p>
+            <button onclick="choosePlan('Week')">Izvēlēties</button>
+        </div>
+
+        <div class="card">
+            <h3>Month</h3>
+            <div class="price">7€</div>
+            <p>Strukturētai un pārdomātai ikdienas plānošanai.</p>
+            <button onclick="choosePlan('Month')">Izvēlēties</button>
+        </div>
+
+        <div class="card">
+            <h3>Year</h3>
+            <div class="price">25€</div>
+            <p>Ilgtermiņa mērķu sasniegšanai un gada vīzijai.</p>
+            <button onclick="choosePlan('Year')">Izvēlēties</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Par mums</h2>
+    <div class="about">
+        <p>
+        Mēs radījām plānotāju, kas saprot tavus termiņus,
+        respektē tavu tempu un palīdz sasniegt rezultātus bez izdegšanas.
+        Tas nav tikai blociņš — tā ir sistēma ar raksturu.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Sazinies ar mums</h2>
+    <form onsubmit="sendForm(event)">
+        <input type="text" placeholder="Vārds" required>
+        <input type="email" placeholder="E-pasts" required>
+        <textarea rows="4" placeholder="Ziņojums"></textarea>
+        <button type="submit">Nosūtīt</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Smart Planner
+</footer>
+
+<script>
+function choosePlan(plan) {
+    alert("Tu izvēlējies: " + plan + " plānu!");
+}
+
+function sendForm(event) {
+    event.preventDefault();
+    alert("Ziņojums nosūtīts!");
+}
+</script>
+
+</body>
+</html>
